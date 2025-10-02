@@ -1,8 +1,40 @@
-# React + Vite
+# 🚀 DevOps Learning Hub with Automated CI/CD to AWS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based educational platform designed to help users learn DevOps through articles and hands-on practice — all integrated with a CI/CD pipeline that deploys automatically to AWS.
 
-Currently, two official plugins are available:
+## 🌐 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page** – Overview of the platform.
+- **Articles Section** – DevOps-related tutorials and guides.
+- **Playground Page** – A simulated CLI interface to practice bash commands with real-time feedback.
+
+## ⚙️ DevOps & CI/CD Integration
+
+This project includes a complete CI/CD pipeline using **GitHub Actions**:
+
+- On every code push:
+  - Runs linting and tests.
+  - Builds a Docker image of the application.
+  - Deploys the container to an **AWS EC2 instance** automatically.
+
+## 🚀 Technologies Used
+
+- **Frontend**: React
+- **CI/CD**: GitHub Actions
+- **Containerization**: Docker
+- **Deployment**: AWS EC2
+
+## 📦 Getting Started (Locally)
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/devops-learning-hub.git
+
+# Navigate to the project
+cd devops-learning-hub
+
+# Install dependencies
+npm install
+
+# Run the app locally
+npm start
