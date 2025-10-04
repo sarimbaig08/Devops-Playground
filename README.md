@@ -26,7 +26,7 @@ This project includes a complete CI/CD pipeline using **GitHub Actions**:
 
 ## 📦 Getting Started (Locally)
 
-````bash
+```bash
 # Clone the repository
 git clone https://github.com/your-username/devops-learning-hub.git
 
@@ -38,7 +38,7 @@ npm install
 
 # Run the app locally
 npm start
-
+```
 
 ## Connecting local terminal to ec2 machine
 
@@ -57,4 +57,4 @@ icacls "D:\Devops\devops-playground-key.pem"
 
 # Connect to EC2
 ssh -i "D:\Devops\devops-playground-key.pem" ubuntu@<machinePublicIP>
-````
+```
