@@ -26,7 +26,7 @@ This project includes a complete CI/CD pipeline using **GitHub Actions**:
 
 ## 📦 Getting Started (Locally)
 
-```bash
+````bash
 # Clone the repository
 git clone https://github.com/your-username/devops-learning-hub.git
 
@@ -38,3 +38,23 @@ npm install
 
 # Run the app locally
 npm start
+
+
+## Connecting local terminal to ec2 machine
+
+```bash
+# Move pem file to Devops folder (or .ssh folder if you like)
+Move-Item "C:\Users\pcs\Downloads\devops-playground-key.pem" "D:\Devops\devops-playground-key.pem"
+
+# Remove inheritance so other users/groups don’t get permissions
+icacls "D:\Devops\devops-playground-key.pem" /inheritance:r
+
+# Grant ONLY your current Windows user read access
+icacls "D:\Devops\devops-playground-key.pem" /grant:r "${env:USERNAME}:(R)"
+
+# (Optional) Verify permissions
+icacls "D:\Devops\devops-playground-key.pem"
+
+# Connect to EC2
+ssh -i "D:\Devops\devops-playground-key.pem" ubuntu@<machinePublicIP>
+````
